@@ -3,18 +3,28 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import pandas as pd
 
+
 carpeta = Path("paginas_revolico")
 
-archivos = sorted(carpeta.glob("*.html"))
+archivos = list(carpeta.glob("*.html"))
+archivos += list(carpeta.glob("*.htm"))
+archivos = sorted(set(archivos))
 
-print("Cantidad de páginas encontradas:", len(archivos))
+print("Páginas encontradas:", len(archivos))
 
 anuncios = {}
 
-for archivo in archivos:
-    print("\nLeyendo:", archivo.name)
 
-    with open(archivo, "r", encoding="utf-8", errors="ignore") as f:
+for archivo in archivos:
+
+    print("Leyendo:", archivo.name)
+
+    with open(
+        archivo,
+        "r",
+        encoding="utf-8",
+        errors="ignore"
+    ) as f:
         html = f.read()
 
     soup = BeautifulSoup(html, "html.parser")
@@ -22,29 +32,55 @@ for archivo in archivos:
     enlaces = soup.find_all("a", href=True)
 
     for enlace in enlaces:
-        direccion = enlace.get("href")
-        titulo = enlace.get_text(" ", strip=True)
 
-        if "/item/" in direccion and direccion != "/item/publicar" and titulo:
-            url_completa = urljoin(
-                "https://www.revolico.com",
-                direccion
-            )
+        direccion = enlace.get("href", "")
 
-            anuncios[url_completa] = titulo
+        if (
+            "/item/" not in direccion
+            or "/item/publish" in direccion
+        ):
+            continue
+
+        titulo = enlace.get_text(
+            " ",
+            strip=True
+        )
+
+        if not titulo:
+            continue
+
+        url = urljoin(
+            "https://www.revolico.com",
+            direccion
+        )
+
+        # Nivel 2: último contenedor que
+        # pertenece solamente a ese anuncio
+        contenedor = enlace
+
+        for _ in range(2):
+            if contenedor.parent is not None:
+                contenedor = contenedor.parent
+
+        texto_tarjeta = contenedor.get_text(
+            " ",
+            strip=True
+        )
+
+        anuncios[url] = {
+            "titulo": titulo,
+            "texto_tarjeta": texto_tarjeta,
+            "url": url,
+            "pagina_origen": archivo.name
+        }
+
+
+tabla = pd.DataFrame(
+    anuncios.values()
+)
 
 print("\n--- RESULTADO ---")
-print("Anuncios únicos encontrados:", len(anuncios))
-
-datos = []
-
-for url, titulo in anuncios.items():
-    datos.append({
-        "titulo": titulo,
-        "url": url
-    })
-
-tabla = pd.DataFrame(datos)
+print("Anuncios únicos:", len(tabla))
 
 print("\nPrimeros anuncios:")
 print(tabla.head(10))
@@ -55,4 +91,6 @@ tabla.to_csv(
     encoding="utf-8-sig"
 )
 
-print("\nArchivo enlaces_anuncios_revolico.csv guardado correctamente.")
+print(
+    "\nArchivo enlaces_anuncios_revolico.csv guardado."
+)
