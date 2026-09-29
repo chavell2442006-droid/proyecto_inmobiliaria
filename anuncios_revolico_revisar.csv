@@ -1,11 +1,11 @@
-﻿titulo,url,precio,moneda,sirve_proyecto
-Venta de apart o cambio con un vuelto $ por algo más grande,https://www.revolico.com/item/venta-de-apart-o-cambio-con-un-vuelto-por-algo-mas-grande-57719762?p,,,REVISAR
-45.000 USD SE VENDE o permuta APTO EXCLUSIVO en CORAZON de VEDADO!,https://www.revolico.com/item/se-vende-o-permuta-apto-exclusivo-en-corazon-de-vedado-51237591,45000.0,USD,REVISAR
-20.000 USD Se vende o se permuta,https://www.revolico.com/item/se-vende-o-se-permuta-57758117,20000.0,USD,REVISAR
-5.000 USD Se vende o se permuta casa biplanta en mariano,https://www.revolico.com/item/se-vende-o-se-permuta-casa-biplanta-en-mariano-57757955,5000.0,USD,REVISAR
-Detalles en la imagen,https://www.revolico.com/item/detalles-en-la-imagen-56534704,,,REVISAR
-6.000 USD Se vende o permuta,https://www.revolico.com/item/se-vende-o-permuta-56517840,6000.0,USD,REVISAR
-12.500 USD SE VENDE CASA EN ARROYO NARANJO Vivienda en usufructo (en proceso de cambio de concepto a Propiedad.,https://www.revolico.com/item/se-vende-casa-en-arroyo-naranjo-vivienda-en-usufructo-en-proceso-de-cambio-de-concepto-a-propiedad-57173644,12500.0,USD,REVISAR
-"150.000 USD Se vende o cambio casa en Playa, Habana, 3 cuartos, 3 baños, piscina.",https://www.revolico.com/item/se-vende-o-cambio-casa-en-playa-habana-3-cuartos-3-banos-piscina-54269233,150000.0,USD,REVISAR
-10.000 USD Se vende o se permuta apartamento en el casino deportivo 5to piso,https://www.revolico.com/item/se-vende-o-se-permuta-apartamento-en-el-casino-deportivo-5to-piso-56488944,10000.0,USD,REVISAR
-150.000 USD 🏠 Venta o Cambio Casa Playa – 3 Hab + Piscina – 150k USD ¡Mejores precios y calidad conmigo!,https://www.revolico.com/item/venta-o-cambio-casa-playa-3-hab-piscina-150k-usd-mejores-precios-y-calidad-conmigo-56661151,150000.0,USD,REVISAR
+﻿titulo,url,precio,moneda,sirve_proyecto,municipio,habitaciones
+Venta de apart o cambio con un vuelto $ por algo más grande,https://www.revolico.com/item/venta-de-apart-o-cambio-con-un-vuelto-por-algo-mas-grande-57719762?p,,,REVISAR,,
+45.000 USD SE VENDE o permuta APTO EXCLUSIVO en CORAZON de VEDADO!,https://www.revolico.com/item/se-vende-o-permuta-apto-exclusivo-en-corazon-de-vedado-51237591,45000.0,USD,REVISAR,,
+20.000 USD Se vende o se permuta,https://www.revolico.com/item/se-vende-o-se-permuta-57758117,20000.0,USD,REVISAR,,
+5.000 USD Se vende o se permuta casa biplanta en mariano,https://www.revolico.com/item/se-vende-o-se-permuta-casa-biplanta-en-mariano-57757955,5000.0,USD,REVISAR,,
+Detalles en la imagen,https://www.revolico.com/item/detalles-en-la-imagen-56534704,,,REVISAR,,
+6.000 USD Se vende o permuta,https://www.revolico.com/item/se-vende-o-permuta-56517840,6000.0,USD,REVISAR,,
+12.500 USD SE VENDE CASA EN ARROYO NARANJO Vivienda en usufructo (en proceso de cambio de concepto a Propiedad.,https://www.revolico.com/item/se-vende-casa-en-arroyo-naranjo-vivienda-en-usufructo-en-proceso-de-cambio-de-concepto-a-propiedad-57173644,12500.0,USD,REVISAR,Arroyo Naranjo,
+"150.000 USD Se vende o cambio casa en Playa, Habana, 3 cuartos, 3 baños, piscina.",https://www.revolico.com/item/se-vende-o-cambio-casa-en-playa-habana-3-cuartos-3-banos-piscina-54269233,150000.0,USD,REVISAR,Playa,3.0
+10.000 USD Se vende o se permuta apartamento en el casino deportivo 5to piso,https://www.revolico.com/item/se-vende-o-se-permuta-apartamento-en-el-casino-deportivo-5to-piso-56488944,10000.0,USD,REVISAR,,
+150.000 USD 🏠 Venta o Cambio Casa Playa – 3 Hab + Piscina – 150k USD ¡Mejores precios y calidad conmigo!,https://www.revolico.com/item/venta-o-cambio-casa-playa-3-hab-piscina-150k-usd-mejores-precios-y-calidad-conmigo-56661151,150000.0,USD,REVISAR,Playa,

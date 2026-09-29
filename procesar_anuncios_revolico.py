@@ -151,7 +151,73 @@ anuncios["sirve_proyecto"] = anuncios["titulo"].apply(
     clasificar_anuncio
 )
 
+# -----------------------------------
+# 6. EXTRAER MUNICIPIO
+# -----------------------------------
 
+def extraer_municipio(titulo):
+
+    titulo = str(titulo).lower()
+
+    municipios = {
+        "arroyo naranjo": "Arroyo Naranjo",
+        "boyeros": "Boyeros",
+        "centro habana": "Centro Habana",
+        "cerro": "Cerro",
+        "cotorro": "Cotorro",
+        "diez de octubre": "Diez de Octubre",
+        "10 de octubre": "Diez de Octubre",
+        "guanabacoa": "Guanabacoa",
+        "habana del este": "Habana del Este",
+        "habana vieja": "Habana Vieja",
+        "la lisa": "La Lisa",
+        "marianao": "Marianao",
+        "playa": "Playa",
+        "plaza de la revolucion": "Plaza de la Revolución",
+        "plaza": "Plaza de la Revolución",
+        "regla": "Regla",
+        "san miguel del padron": "San Miguel del Padrón"
+    }
+
+    for texto, municipio in municipios.items():
+        if texto in titulo:
+            return municipio
+
+    return None
+
+
+anuncios["municipio"] = anuncios["titulo"].apply(
+    extraer_municipio
+)
+
+
+# -----------------------------------
+# 7. EXTRAER HABITACIONES
+# -----------------------------------
+
+def extraer_habitaciones(titulo):
+
+    titulo = str(titulo).lower()
+
+    patrones = [
+        r"(\d+)\s+habitaciones",
+        r"(\d+)\s+habitacion",
+        r"(\d+)\s+cuartos",
+        r"(\d+)\s+cuarto"
+    ]
+
+    for patron in patrones:
+        encontrado = re.search(patron, titulo)
+
+        if encontrado:
+            return int(encontrado.group(1))
+
+    return None
+
+
+anuncios["habitaciones"] = anuncios["titulo"].apply(
+    extraer_habitaciones
+)
 # -----------------------------------
 # 6. MOSTRAR RESUMEN
 # -----------------------------------
@@ -208,7 +274,21 @@ excluidos = anuncios[
     anuncios["sirve_proyecto"] == "NO"
 ].copy()
 
+print("\n--- MUNICIPIOS ---")
+print("Municipios encontrados:", anuncios["municipio"].notna().sum())
 
+print("\nMunicipios más frecuentes:")
+print(anuncios["municipio"].value_counts())
+
+print("\n--- HABITACIONES ---")
+print("Anuncios con habitaciones encontradas:", anuncios["habitaciones"].notna().sum())
+
+print("\nPrimeros ejemplos:")
+print(
+    anuncios[
+        ["titulo", "municipio", "habitaciones", "precio"]
+    ].head(20)
+)
 # -----------------------------------
 # 9. GUARDAR RESULTADOS
 # -----------------------------------

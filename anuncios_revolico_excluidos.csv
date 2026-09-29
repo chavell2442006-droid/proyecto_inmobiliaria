@@ -1,8 +1,8 @@
-﻿titulo,url,precio,moneda,sirve_proyecto
-"Busco alquiler de garaje puerta calle en ave 19,70,31 o 41 en Playa para negocio",https://www.revolico.com/item/busco-alquiler-de-garaje-puerta-calle-en-ave-197031-o-41-en-playa-para-negocio-57755074,,,NO
-Compro casa o apartamento en Guanabacoa o Regla,https://www.revolico.com/item/compro-casa-o-apartamento-en-guanabacoa-o-regla-57754809,,,NO
-"Se busca casa en La Víbora, Santo Suárez o Mónaco",https://www.revolico.com/item/se-busca-casa-en-la-vibora-santo-suarez-o-monaco-57370289,,,NO
-Se vende terreno,https://www.revolico.com/item/se-vende-terreno-57754003,,,NO
-7.000 USD Ref # 34.Se vende terreno con casa de dos cuartos en mal estado o se permuta!!!,https://www.revolico.com/item/se-vende-terreno-con-casa-de-dos-cuartos-en-mal-estado-o-se-permuta-52063843,7000.0,USD,NO
-5.000 USD COMPRO APTO DE 1 CUARTO,https://www.revolico.com/item/compro-apto-de-1-cuarto-54639345,5000.0,USD,NO
-8.000 USD COMPRO APARTAMENTO EN VEDADO O HABANA VIEJA,https://www.revolico.com/item/compro-apartamento-en-vedado-o-habana-vieja-57744422,8000.0,USD,NO
+﻿titulo,url,precio,moneda,sirve_proyecto,municipio,habitaciones
+"Busco alquiler de garaje puerta calle en ave 19,70,31 o 41 en Playa para negocio",https://www.revolico.com/item/busco-alquiler-de-garaje-puerta-calle-en-ave-197031-o-41-en-playa-para-negocio-57755074,,,NO,Playa,
+Compro casa o apartamento en Guanabacoa o Regla,https://www.revolico.com/item/compro-casa-o-apartamento-en-guanabacoa-o-regla-57754809,,,NO,Guanabacoa,
+"Se busca casa en La Víbora, Santo Suárez o Mónaco",https://www.revolico.com/item/se-busca-casa-en-la-vibora-santo-suarez-o-monaco-57370289,,,NO,,
+Se vende terreno,https://www.revolico.com/item/se-vende-terreno-57754003,,,NO,,
+7.000 USD Ref # 34.Se vende terreno con casa de dos cuartos en mal estado o se permuta!!!,https://www.revolico.com/item/se-vende-terreno-con-casa-de-dos-cuartos-en-mal-estado-o-se-permuta-52063843,7000.0,USD,NO,,
+5.000 USD COMPRO APTO DE 1 CUARTO,https://www.revolico.com/item/compro-apto-de-1-cuarto-54639345,5000.0,USD,NO,,1.0
+8.000 USD COMPRO APARTAMENTO EN VEDADO O HABANA VIEJA,https://www.revolico.com/item/compro-apartamento-en-vedado-o-habana-vieja-57744422,8000.0,USD,NO,Habana Vieja,
