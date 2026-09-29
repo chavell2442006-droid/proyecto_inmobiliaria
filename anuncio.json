@@ -1,0 +1,9 @@
+{
+    "tipo": "Apartamento",
+    "operacion": "Venta",
+    "precio": 95000,
+    "moneda": "USD",
+    "municipio": "Playa",
+    "habitaciones": 3,
+    "banos": 2
+}

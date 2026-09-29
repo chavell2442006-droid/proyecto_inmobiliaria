@@ -1,0 +1,21 @@
+# Paginas de Revolico descargadas manualmente
+paginas_revolico/
+revolico_pagina_*_files/
+*.html
+
+# Archivos temporales de Python
+__pycache__/
+*.pyc
+
+# Entornos virtuales
+.venv/
+venv/
+
+# Credenciales y secretos
+.env
+*.session
+*.session-journal
+
+# Archivos temporales de Windows
+Thumbs.db
+Desktop.ini
